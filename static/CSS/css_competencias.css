@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f8f9fa; /* Color de fondo del cuerpo */
+    height: 650px;
+}
+
+.container-fluid {
+    padding: 20px; /* Espaciado interior del contenedor fluido */
+    background-color: #343a40;
+    display: block;
+    justify-content: center;
+}
+.modal-header h5{
+    align-content: center;
+    text-align: center;
+}
+.boton-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-modal #boton-m{
+    border-radius: 15px;
+    background-color: #9ba1a1
+}
+
+.cuadro-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.cuadro-4 .row {
+    margin-bottom: 10px; /* Espacio entre filas */
+    justify-content: center;
+}
+
+.cuadro-4 .col-md-5 {
+    height: 325px;
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.cuadro-4 img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%; /* Para asegurar que la imagen no exceda la altura del contenedor */
+}
+.boton-modal-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Ajusta según sea necesario */
+}
+
+.boton-modal-2 #boton-m-2 {
+    border-radius: 15px;
+    border: 1px solid white;
+    background-color: #3183d7;
+}
+
+.boton-modal-2 #boton-m-3 {
+    border-radius: 15px;
+    border: 1px solid white;
+    background-color: #31d74c;
+}
+
+.boton-modal-2 #boton-m-4 {
+    border-radius: 15px;
+    border: 1px solid white;
+    background-color: #c1ca24;
+}
+
+.boton-modal-2 #boton-m-5 {
+    border-radius: 15px;
+    border: 1px solid white;
+    background-color: #dc3f59;
+}
+
+
+
+
