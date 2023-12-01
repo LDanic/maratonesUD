@@ -6,8 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="{{ url_for('static', filename='CSS/css_competencias.css') }}" rel="stylesheet" type="text/css"> 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-aKx8ZY4kD4J8HdUnI5IigC0IxPz7y9fN2Kx5P4flf9O2oaf8tmIcw1JHJVhK2zo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofZVfUX5Z9ti6DZz5cuW8kOhX6DAjD5eZ" crossorigin="anonymous"></script>
         <title>Competencias</title>
     </head>
     <body>
@@ -22,7 +20,7 @@
                         Toda la informacion del semestre pasado sera borrada,¿Quieres continuar?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-dismiss="modal">Si</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="eliminarTodo()">Si</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
                     </div>
                 </div>
@@ -106,7 +104,7 @@
                         BASICO
                         <img id="img2" class="img-fluid" src="https://www.freecodecamp.org/news/content/images/2022/12/tips.png">
                         <div class="boton-modal-2 mb-2">
-                            <button type="button" id="boton-m-2" class="btn btn-dark" data-toggle="modal" data-target="#ModalBasico">
+                            <button type="button" id="boton-m-2" class="btn btn-dark" onclick="basicos()">
                                 Equipos Inscritos
                             </button>
                         </div>
@@ -115,7 +113,7 @@
                         INTERMEDIO
                         <img id="img2" class="img-fluid" src="https://www.freecodecamp.org/espanol/news/content/images/2023/01/Screenshot-2023-01-05-at-4.02.28-PM.png">
                         <div class="boton-modal-2 mb-2">
-                            <button type="button" id="boton-m-3" class="btn btn-dark" data-toggle="modal" data-target="#ModalIntermedio">
+                            <button type="button" id="boton-m-3" class="btn btn-dark" onclick="intermedios()">
                                 Equipos Inscritos
                             </button>
                         </div>
@@ -126,7 +124,7 @@
                         AVANZADO
                         <img class="img-fluid" id="img3" src="https://www.freecodecamp.org/news/content/images/2022/12/types-of-programming-languages.png">
                         <div class="boton-modal-2 mb-2">
-                            <button type="button" id="boton-m-4" class="btn btn-dark" data-toggle="modal" data-target="#ModalAvanzado">
+                            <button type="button" id="boton-m-4" class="btn btn-dark" onclick="avanzados()">
                                 Equipos Inscritos
                             </button>
                         </div>
@@ -135,7 +133,7 @@
                         ELITE
                         <img class="img-fluid" id="img4" src="https://www.freecodecamp.org/news/content/images/2022/12/1---frontend.png">
                         <div class="boton-modal-2 mb-2">
-                            <button type="button" id="boton-m-5" class="btn btn-dark" data-toggle="modal" data-target="#ModalElite">
+                            <button type="button" id="boton-m-5" class="btn btn-dark" onclick="elite()">
                                 Equipos Inscritos
                             </button>
                         </div>
@@ -143,6 +141,7 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="{{ url_for('static',filename='script/competencia.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>

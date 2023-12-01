@@ -6,13 +6,13 @@ from conectionDB import *
 equipos_bp = Blueprint('equipos', __name__)
 
 
-@equipos_bp.route('/equipos', methods=['GET'])
-def get_team():
+@equipos_bp.route('/equipos/<categoria>', methods=['GET'])
+def get_team(categoria):
     conn = get_connection()
     # la parte de extras de pone los datos como objetos
     cur = conn.cursor(cursor_factory=extras.RealDictCursor)
 
-    cur.execute('SELECT * FROM equipo')
+    cur.execute('SELECT * FROM equipo WHERE id_competencia = %s', (categoria, ))
     teams = cur.fetchall()
     cur.close()
     conn.close()
@@ -38,7 +38,6 @@ def get_team_members(id):
 @equipos_bp.route('/equipos', methods=['POST'])
 def create_team():
     new_team = request.get_json()  # guarda lo que viene en un jason en una variable
-    cod = new_team['id_equipo'] 
     nom = new_team['nom_equipo']
     id_competencia = new_team['id_competencia']
 
@@ -46,9 +45,9 @@ def create_team():
     conn = get_connection()  # crea una coneccion con la BD
     cur = conn.cursor(cursor_factory=extras.RealDictCursor)
 
-    cur.execute('INSERT INTO equipo(id_equipo, nom_equipo, id_competencia)'+
-                ' VALUES (%s, %s, %s) RETURNING *',
-                (cod, nom, id_competencia))  # consulta para la BD
+    cur.execute('INSERT INTO equipo(nom_equipo, id_competencia)'+
+                ' VALUES (%s, %s) RETURNING *',
+                (nom, id_competencia))  # consulta para la BD
     
     team_created = cur.fetchone()
 

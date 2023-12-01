@@ -32,5 +32,13 @@ def equipos():
 def estudiantes():
     return render_template("Estudiantes.html")
 
+@app.get('/Galeria.html')
+def galeria():
+    return render_template("Galeria.html")
+
+@app.get('/GaleriaEst.html')
+def galeriaEst():
+    return render_template("GaleriaEst.html")
+
 if __name__ == '__main__':
     app.run(debug=True)

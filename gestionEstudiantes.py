@@ -23,7 +23,7 @@ def get_student():
 
 @estudiantes_bp.route('/estudiantes', methods=['POST'])
 def create_student():
-    new_student = request.get_json()  # guarda lo que viene en un jason en una variable
+    new_student = request.get_json()  # guarda lo que viene en un json en una variable
     cod = new_student['codigo_est']
     nom = new_student['nom_est']
     ape = new_student['ape_est']
@@ -45,7 +45,7 @@ def create_student():
         conn.close()
         return jsonify(student_created)
 
-    return jsonify({'message': 'team is full'})
+    return jsonify({'message': 'team is full'}), 404
 
 
 @estudiantes_bp.route('/estudiantes/<cod>', methods=['DELETE'])

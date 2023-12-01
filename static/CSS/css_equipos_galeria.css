@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f8f9fa; /* Color de fondo del cuerpo */
+    height: 650px;
+}
+
+.container-fluid {
+    padding: 20px; /* Espaciado interior del contenedor fluido */
+    background-color: #343a40;
+    justify-content: center;
+}
+.modal-header h5{
+    align-content: center;
+    text-align: center;
+}
+
+.col{
+    padding-top: 10px;
+}
+
+
+
+
